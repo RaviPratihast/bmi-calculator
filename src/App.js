@@ -23,14 +23,10 @@ function App() {
   return (
     <div className="App">
       <h1>BMI CALCULATOR</h1>
-      <p>
-        BMI does not distinguish between men and women. It’s a simple formula
-        that uses height and weight to calculate a number meant to represent a
-        person’s body fat levels.
-      </p>
+
       <div className="bmi-calculator-container">
         <form onSubmit={handleSubmit}>
-          <label htmlFor="height">height</label>
+          <label htmlFor="height">Height</label>
           <input
             type="number"
             placeholder="height in cm"
@@ -45,15 +41,19 @@ function App() {
             onChange={(event) => setWeight(event.target.value)}
             value={weight}
           />
-          <button type="submit">Button</button>
+          <button type="submit">check</button>
+          <div className="display-container">
+            <span>BMI: {BMI}</span>
+          </div>
         </form>
-
-        <div className="display-container">
-          <span>BMI: {BMI}</span>
-        </div>
 
         <div className="BMI-information-container">
           <h2>BMI Chart</h2>
+          <p>
+           * BMI does not distinguish between men and women. It’s a simple
+            formula that uses height and weight to calculate a number meant to
+            represent a person’s body fat levels.
+          </p>
           <div className="main-BMI-chart-container">
             <div className="bmi-row BMI-range-classification-container ">
               <div className="bmi-column">BMI Range</div>
@@ -76,12 +76,10 @@ function App() {
               <div>overweight</div>
             </div>
             <div className="bmi-row obesity-class-1-container">
-              <div>30.0–34.9</div>
-              <div>obesity class I</div>
+              <div>30.0–34.9</div> <div>obesity class I</div>
             </div>
             <div className="bmi-row obesity-class-2-container">
-              <div>35.0-39.9</div>
-              <div>obesity class II</div>
+              <div>35.0-39.9</div> <div>obesity class II</div>
             </div>
             <div className="bmi-row obesity-class-3-container">
               <div>40 or greater</div>
@@ -91,10 +89,10 @@ function App() {
         </div>
       </div>
       <footer>
-        This BMI calculator is for informational purposes only. Consult a
+        **This BMI calculator is for informational purposes only. Consult a
         healthcare provider before making health decisions. BMI is an indirect
         assessment of health risk and may not be accurate because it cannot
-        determine the proportion or distribution of body fat.
+        determine the proportion or distribution of body fat.**
       </footer>
     </div>
   );
