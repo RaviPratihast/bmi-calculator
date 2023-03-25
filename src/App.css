@@ -86,6 +86,6 @@ footer {
     flex-direction: column;
   }
   .bmi-calculator-container>form{
-    padding: 20px;
+    padding: 18px;
   }
 }
