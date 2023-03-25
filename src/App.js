@@ -20,6 +20,11 @@ function App() {
   function calcBMI(height, weight) {
     return (weight / height ** 2).toFixed(1);
   }
+  function resetFunc() {
+    setHeight("");
+    setWeight("");
+    setBMI("");
+  }
 
   return (
     <div className="App">
@@ -38,8 +43,7 @@ function App() {
           <label htmlFor="Weight">Weight</label>
           <input
             type="number"
-            placeholder="weight in kilogram
-            "
+            placeholder="weight in kilogram"
             onChange={(event) => setWeight(event.target.value)}
             value={weight}
             required
@@ -51,11 +55,7 @@ function App() {
             <button
               type="reset"
               className="btn reset-btn"
-              onClick={() => {
-                setHeight("");
-                setWeight("");
-                setBMI("");
-              }}
+              onClick={() => resetFunc()}
             >
               Reset
             </button>
@@ -68,7 +68,7 @@ function App() {
         <div className="BMI-information-container">
           <h2>BMI Chart</h2>
           <p>
-            * BMI does not distinguish between men and women. It’s a simple
+            *BMI does not distinguish between men and women. It’s a simple
             formula that uses height and weight to calculate a number meant to
             represent a person’s body fat levels.
           </p>
