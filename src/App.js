@@ -60,7 +60,7 @@ function App() {
           <div className="main-BMI-chart-container">
             <div className="bmi-row BMI-range-classification-container ">
               <div className="bmi-column">BMI Range</div>
-              <div className="bmi-column">classification</div>
+              <div className="bmi-column">Classification</div>
             </div>
             <div className="bmi-row severe-underweight-container">
               <div>less than 16.5</div>
