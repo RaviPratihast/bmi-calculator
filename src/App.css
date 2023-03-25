@@ -79,3 +79,10 @@ footer {
   width: 100%;
   background-color: var(--border-color);
 }
+
+/* mobile */
+@media only screen and (max-width: 680px) {
+  .bmi-calculator-container {
+    flex-direction: column;
+  }
+}
