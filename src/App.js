@@ -9,7 +9,7 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const heightNew = Number(height);
+    const heightNew = Number(height) / 100;
     const weightNew = Number(weight);
     const totalBMI = calcBMI(heightNew, weightNew);
     setBMI(totalBMI);
@@ -33,7 +33,7 @@ function App() {
           <label htmlFor="height">height</label>
           <input
             type="number"
-            placeholder="height in meter"
+            placeholder="height in cm"
             onChange={(event) => setHeight(event.target.value)}
             value={height}
           />
