@@ -15,10 +15,7 @@ function App() {
       const weightNew = Number(weight);
       const totalBMI = calcBMI(heightNew, weightNew);
       setBMI(totalBMI);
-    } else {
     }
-
-    // console.log("event", e.target.value);
   }
   function calcBMI(height, weight) {
     return (weight / height ** 2).toFixed(1);
