@@ -55,35 +55,35 @@ function App() {
         <div className="BMI-information-container">
           <h2>BMI Chart</h2>
           <div className="main-BMI-chart-container">
-            <div className="BMI-range-classification-container ">
-              <div>BMI Range</div>
-              <div>classification</div>
+            <div className="bmi-row BMI-range-classification-container ">
+              <div className="bmi-column">BMI Range</div>
+              <div className="bmi-column">classification</div>
             </div>
-            <div className="severe-underweight-container">
+            <div className="bmi-row severe-underweight-container">
               <div>less than 16.5</div>
               <div>severe underweight</div>
             </div>
-            <div className="underweight-container">
+            <div className="bmi-row underweight-container">
               <div>less than 18.5</div>
               <div>underweight</div>
             </div>
-            <div className="normal-weight-container">
+            <div className="bmi-row normal-weight-container">
               <div>18.5-24.9</div>
               <div>normal weight</div>
             </div>
-            <div className="overweight-container">
+            <div className="bmi-row overweight-container">
               <div>25.0–29.9</div>
               <div>overweight</div>
             </div>
-            <div className="obesity-class-1-container">
+            <div className="bmi-row obesity-class-1-container">
               <div>30.0–34.9</div>
               <div>obesity class I</div>
             </div>
-            <div className="obesity-class-2-container">
+            <div className="bmi-row obesity-class-2-container">
               <div>35.0-39.9</div>
               <div>obesity class II</div>
             </div>
-            <div className="obesity-class-3-container">
+            <div className="bmi-row obesity-class-3-container">
               <div>40 or greater</div>
               <div>obesity class III</div>
             </div>
