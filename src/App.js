@@ -9,10 +9,14 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const heightNew = Number(height) / 100;
-    const weightNew = Number(weight);
-    const totalBMI = calcBMI(heightNew, weightNew);
-    setBMI(totalBMI);
+    console.log(height, weight);
+    if (height !== "" && weight !== "") {
+      const heightNew = Number(height) / 100;
+      const weightNew = Number(weight);
+      const totalBMI = calcBMI(heightNew, weightNew);
+      setBMI(totalBMI);
+    } else {
+    }
 
     // console.log("event", e.target.value);
   }
@@ -32,6 +36,7 @@ function App() {
             placeholder="height in cm"
             onChange={(event) => setHeight(event.target.value)}
             value={height}
+            required
           />
           <label htmlFor="Weight">Weight</label>
           <input
@@ -40,6 +45,7 @@ function App() {
             "
             onChange={(event) => setWeight(event.target.value)}
             value={weight}
+            required
           />
           <button type="submit">check</button>
           <div className="display-container">
@@ -50,7 +56,7 @@ function App() {
         <div className="BMI-information-container">
           <h2>BMI Chart</h2>
           <p>
-           * BMI does not distinguish between men and women. It’s a simple
+            * BMI does not distinguish between men and women. It’s a simple
             formula that uses height and weight to calculate a number meant to
             represent a person’s body fat levels.
           </p>
