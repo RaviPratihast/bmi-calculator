@@ -44,7 +44,22 @@ function App() {
             value={weight}
             required
           />
-          <button type="submit">check</button>
+          <div className="button">
+            <button type="submit" className="btn check-btn">
+              check
+            </button>
+            <button
+              type="reset"
+              className="btn reset-btn"
+              onClick={() => {
+                setHeight("");
+                setWeight("");
+                setBMI("");
+              }}
+            >
+              Reset
+            </button>
+          </div>
           <div className="display-container">
             <span>BMI: {BMI}</span>
           </div>
